@@ -8,8 +8,17 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [10.x, 12.x, 14.x]
+        os: [
+          'ubuntu-latest',
+          'windows-latest',
+          'macos-latest',
+        ]
+        node: [
+          '10.13',
+          '12.13',
+          '14.14',
+          #'15' temporarily disabled because of npm@7 bug https://github.com/npm/cli/issues/1865
+        ]
 
     runs-on: ${{ matrix.os }}
 
